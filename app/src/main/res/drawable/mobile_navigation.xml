@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/trangchu">
+
+    <fragment
+        android:id="@+id/trangchu"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.TrangChu.TrangChu"
+        android:label="Trang Chủ"
+        tools:layout="@layout/fragment_trang_chu" >
+        <action
+            android:id="@+id/action_trangchu_to_phanTich"
+            app:destination="@id/phanTich" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/giaodich"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.GiaoDich.GiaoDich"
+        android:label="Giao Dịch"
+        tools:layout="@layout/fragment_giao_dich" />
+
+    <fragment
+        android:id="@+id/themmoigiaodich"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.ThemMoiGiaoDich.ThemMoiGiaoDich"
+        android:label="Thêm Mới Giao Dịch"
+        tools:layout="@layout/fragment_them_moi_giao_dich" />
+
+    <fragment
+        android:id="@+id/danhmuc"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.DanhMuc.DanhMuc"
+        android:label="Danh Mục"
+        tools:layout="@layout/fragment_danh_muc" />
+
+    <fragment
+        android:id="@+id/hoso"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.HoSo.HoSo"
+        android:label="Hồ Sơ"
+        tools:layout="@layout/fragment_ho_so" />
+
+    <!-- Thêm fragment PhanTich -->
+    <fragment
+        android:id="@+id/phanTich"
+        android:name="org.o7planning.nhom8_quanlychitieu.ui.PhanTich.PhanTich"
+        android:label="Phân Tích"
+        tools:layout="@layout/fragment_phan_tich" >
+        <argument
+            android:name="month"
+            app:argType="string"
+            android:defaultValue="4/2025" />
+    </fragment>
+</navigation>

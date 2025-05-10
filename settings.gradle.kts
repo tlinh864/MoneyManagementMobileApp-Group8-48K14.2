@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // Thêm repository jitpack cho MPAndroidChart
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
 rootProject.name = "Nhom8-QuanLyChiTieu"
 include(":app")
- 

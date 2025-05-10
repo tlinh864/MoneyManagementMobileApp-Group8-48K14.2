@@ -32,10 +32,14 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    // Thêm cờ compiler để hiển thị chi tiết về các API deprecated
+    tasks.withType<JavaCompile>().configureEach {
+        options.compilerArgs.add("-Xlint:deprecation")
+    }
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -46,4 +50,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Thêm CardView cho giao diện
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    // Thêm RecyclerView cho danh sách giao dịch
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Thêm thư viện MPAndroidChart cho biểu đồ
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }
